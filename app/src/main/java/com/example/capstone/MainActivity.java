@@ -1,10 +1,12 @@
 package com.example.capstone;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -22,11 +24,13 @@ public class MainActivity extends AppCompatActivity {
     private MenuItem mSearch;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
-
+    public static String strNickname,strProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         //키해시값 구하기 -> Key Hash Value : ~~~~
 //        GetKeyHashValue.showKeyHash(this);
@@ -55,6 +59,17 @@ public class MainActivity extends AppCompatActivity {
         ui.createCategory();
         ui.createNav_Bottom();
         ui.createNav_Drawer();
+
+        //TextView tvNickname = findViewById(R.id.user_id);
+        //TextView tvProfile = findViewById(R.id.tvProfile);
+
+        Intent intent = getIntent();
+        //strNickname = intent.getStringExtra("name");
+        //strProfile = intent.getStringExtra("profile");
+
+        //tvNickname.setText(strNickname);
+        strNickname = intent.getStringExtra("name");
+        //tvProfile.setText(strProfile);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

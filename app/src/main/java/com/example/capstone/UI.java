@@ -2,6 +2,7 @@ package com.example.capstone;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -216,8 +218,11 @@ class UI {
 //                                    }
 //                                });
 //                        builder.show();
-                        new Login_Info();
-                        Toast.makeText(context, "아이디와 패스워드", Toast.LENGTH_SHORT).show();
+
+
+
+
+                        Toast.makeText(context, "카카오톡 닉네임 : "  + MainActivity.strNickname, Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.info:
                         Toast.makeText(context, "도움말", Toast.LENGTH_SHORT).show();

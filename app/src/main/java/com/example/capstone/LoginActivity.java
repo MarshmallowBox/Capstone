@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     private class SessionCallback implements ISessionCallback {
         @Override
         public void onSessionOpened() {
+            Toast.makeText(getApplicationContext(), "로그인 시작(OnSessionOpened)", Toast.LENGTH_SHORT).show();
             UserManagement.getInstance().me(new MeV2ResponseCallback() {
                 @Override
                 public void onFailure(ErrorResult errorResult) {
@@ -69,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.putExtra("name", result.getNickname());
                     intent.putExtra("profile", result.getProfileImagePath());
-                    System.out.printf(result.getNickname()+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                    Toast.makeText(getApplicationContext(), "로그인을 완료했습니다.(OnSuccess)", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                     finish();
                 }

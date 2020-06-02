@@ -26,15 +26,13 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="3da5404d13fa6d57c44f4e125acb245e" />
         <activity android:name=".LoginActivity">
-
-        </activity>
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
