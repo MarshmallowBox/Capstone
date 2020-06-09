@@ -143,6 +143,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     /////////////////////////////네이버///////////////////////////////////////////
+    //회원이름, 이메일, 별명, 프로필사진, 성별, 생일, 연령대
 
     //초기화
     private void init(){
